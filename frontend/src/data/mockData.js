@@ -1,0 +1,138 @@
+export const mockOptionGroups = {
+  size: {
+    id: "size",
+    name: "Cup Size",
+    is_required: true,
+    allow_multiple: false,
+    options: [
+      { id: "size_small", name: "Small", extra_price: 0 },
+      { id: "size_medium", name: "Medium", extra_price: 0.5 },
+      { id: "size_large", name: "Large", extra_price: 1.0 },
+    ],
+  },
+  milk: {
+    id: "milk",
+    name: "Milk Type",
+    is_required: true,
+    allow_multiple: false,
+    options: [
+      { id: "milk_whole", name: "Whole Milk", extra_price: 0 },
+      { id: "milk_skim", name: "Skim Milk", extra_price: 0 },
+      { id: "milk_oat", name: "Oat Milk", extra_price: 0.75 },
+      { id: "milk_almond", name: "Almond Milk", extra_price: 0.75 },
+      { id: "milk_soy", name: "Soy Milk", extra_price: 0.75 },
+    ],
+  },
+  sugar: {
+    id: "sugar",
+    name: "Sugar Level",
+    is_required: true,
+    allow_multiple: false,
+    options: [
+      { id: "sugar_100", name: "100% Sugar", extra_price: 0 },
+      { id: "sugar_50", name: "50% Sugar", extra_price: 0 },
+      { id: "sugar_25", name: "25% Sugar", extra_price: 0 },
+      { id: "sugar_0", name: "No Sugar", extra_price: 0 },
+    ],
+  },
+  ice: {
+    id: "ice",
+    name: "Ice Level",
+    is_required: true,
+    allow_multiple: false,
+    options: [
+      { id: "ice_normal", name: "Normal Ice", extra_price: 0 },
+      { id: "ice_less", name: "Less Ice", extra_price: 0 },
+      { id: "ice_no", name: "No Ice", extra_price: 0 },
+    ],
+  },
+  extras: {
+    id: "extras",
+    name: "Extras (Optional)",
+    is_required: false,
+    allow_multiple: true,
+    options: [
+      { id: "extra_shot", name: "Extra Espresso Shot", extra_price: 1.0 },
+      { id: "extra_vanilla", name: "Vanilla Syrup", extra_price: 0.5 },
+      { id: "extra_caramel", name: "Caramel Syrup", extra_price: 0.5 },
+      { id: "extra_whip", name: "Whipped Cream", extra_price: 0.5 },
+    ],
+  },
+};
+
+export const mockProducts = [
+  {
+    id: "prod_1",
+    name: "Caffe Latte",
+    description: "Espresso with steamed milk and a light layer of foam.",
+    base_price: 4.5,
+    image: "https://images.unsplash.com/photo-1570968915860-54d5c301fa9f?auto=format&fit=crop&q=80&w=400&h=300",
+    category: "Coffee",
+    option_groups: [mockOptionGroups.size, mockOptionGroups.milk, mockOptionGroups.extras],
+  },
+  {
+    id: "prod_2",
+    name: "Cappuccino",
+    description: "Dark, rich espresso lying in wait under a smoothed and stretched layer of thick milk foam.",
+    base_price: 4.5,
+    image: "https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&q=80&w=400&h=300",
+    category: "Coffee",
+    option_groups: [mockOptionGroups.size, mockOptionGroups.milk, mockOptionGroups.extras],
+  },
+  {
+    id: "prod_3",
+    name: "Americano",
+    description: "Espresso shots topped with hot water create a light layer of crema.",
+    base_price: 3.5,
+    image: "https://images.unsplash.com/photo-1551030173-122aabc4489c?auto=format&fit=crop&q=80&w=400&h=300",
+    category: "Coffee",
+    option_groups: [mockOptionGroups.size, mockOptionGroups.extras],
+  },
+  {
+    id: "prod_4",
+    name: "Matcha Green Tea Latte",
+    description: "Smooth and creamy matcha sweetened just right and served with steamed milk.",
+    base_price: 5.0,
+    image: "https://images.unsplash.com/photo-1536420121502-c9a1ea22fb20?auto=format&fit=crop&q=80&w=400&h=300",
+    category: "Tea",
+    option_groups: [mockOptionGroups.size, mockOptionGroups.milk, mockOptionGroups.sugar, mockOptionGroups.ice],
+  },
+  {
+    id: "prod_5",
+    name: "Iced Peach Black Tea",
+    description: "Refreshing black tea blended with peach flavors.",
+    base_price: 4.0,
+    image: "https://images.unsplash.com/photo-1499638673689-79a0b5115d87?auto=format&fit=crop&q=80&w=400&h=300",
+    category: "Tea",
+    option_groups: [mockOptionGroups.size, mockOptionGroups.sugar, mockOptionGroups.ice],
+  },
+  {
+    id: "prod_6",
+    name: "Butter Croissant",
+    description: "Flaky, buttery croissant.",
+    base_price: 3.5,
+    image: "https://images.unsplash.com/photo-1555507036-ab1f40ce88cb?auto=format&fit=crop&q=80&w=400&h=300",
+    category: "Bakery",
+    option_groups: [],
+  },
+  {
+    id: "prod_7",
+    name: "Blueberry Muffin",
+    description: "Delicious muffin packed with fresh blueberries.",
+    base_price: 3.75,
+    image: "https://images.unsplash.com/photo-1607958996333-41aef7caefaa?auto=format&fit=crop&q=80&w=400&h=300",
+    category: "Bakery",
+    option_groups: [],
+  },
+  {
+    id: "prod_8",
+    name: "Chocolate Chip Cookie",
+    description: "Classic homemade-style chocolate chip cookie.",
+    base_price: 2.5,
+    image: "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&q=80&w=400&h=300",
+    category: "Bakery",
+    option_groups: [],
+  }
+];
+
+export const categories = ["All", "Coffee", "Tea", "Bakery"];
